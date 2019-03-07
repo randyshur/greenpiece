@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-about',
   template: `
     <section class="hero is-info is-fullheight is-bold">
     <div class="hero-body">

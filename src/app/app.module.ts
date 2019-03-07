@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 
@@ -25,10 +24,10 @@ import { MatButtonModule, MatCardModule, MatIconModule } from '@angular/material
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
 
     AboutComponent,
-    ContactComponent
+    ContactComponent,
 
     ProductsComponent
 
@@ -38,7 +37,7 @@ import { MatButtonModule, MatCardModule, MatIconModule } from '@angular/material
     AppRoutingModule,
     MatToolbarModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
     HttpClientModule, 
     BrowserAnimationsModule,
     MatButtonModule,
