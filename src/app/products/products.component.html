@@ -1,0 +1,22 @@
+<div class="plantContainer">
+
+<mat-card class="plantCard" *ngFor="let products of products">
+
+  <mat-card-header>
+      <mat-card-title><h2>{{products.product_name}}</h2></mat-card-title>
+  </mat-card-header>
+
+  <img class="plantImg" mat-card-image src={{products.product_image}}  />
+
+  <mat-card-content>
+    <p class="plantDesc">{{products.product_description}}<br>
+    {{products.product_price}}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+      <button mat-button class="button"><mat-icon>delete</mat-icon></button>
+  </mat-card-actions>
+
+</mat-card>
+
+</div>
