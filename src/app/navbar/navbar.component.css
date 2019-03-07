@@ -1,0 +1,23 @@
+
+
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.NavbarFont {
+    font-family: 'organicvinesregular';
+    font-size: 35px;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'organicvinesregular';
+    src: url('..//..//assets/fonts/organicvines-webfont.woff2') format('woff2'),
+         url('..//..//assets/fonts/organicvines-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
