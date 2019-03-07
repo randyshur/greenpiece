@@ -10,7 +10,7 @@
     text-align: left;
     float: left;
     width: 10em;
-    height: 30em;
+    height: 35em;
     margin: 1em;
     padding: 2em;
     box-shadow: 1em 1em 1em rgb(16, 65, 16);
@@ -18,7 +18,10 @@
     border-color: rgb(16, 65, 16);
 }
 
-
 .plantDesc{
     text-align:center;
+}
+
+.button{
+    background-color: transparent !important;
 }
