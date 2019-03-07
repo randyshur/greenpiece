@@ -6,6 +6,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -18,6 +24,8 @@ import { MatButtonModule, MatCardModule, MatIconModule } from '@angular/material
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    NavbarComponent
 
     AboutComponent,
     ContactComponent
@@ -28,6 +36,9 @@ import { MatButtonModule, MatCardModule, MatIconModule } from '@angular/material
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatGridListModule
     HttpClientModule, 
     BrowserAnimationsModule,
     MatButtonModule,
