@@ -23,7 +23,6 @@ import { ProductsComponent } from './products/products.component';
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
-    MatCardModule,
     MatGridListModule,
     HttpClientModule,
     BrowserAnimationsModule,
