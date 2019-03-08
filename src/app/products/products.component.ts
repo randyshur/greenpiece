@@ -21,4 +21,8 @@ export class ProductsComponent implements OnInit {
     })
   }
 
+  deleteProduct(product){
+this.productsservice.deleteProduct(product).subscribe(data => console.log('deleted'))
+  }
+
 }
