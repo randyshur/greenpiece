@@ -4,12 +4,12 @@
   <span class="NavbarFont">Green Piece</span>
 
   <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+  <span class="example-fill-remaining-space">{{currentUser.token.substring(1,5)}}</span>
 
  <span>
   <a routerLink="/home"><Button class="HomeButton">Home</Button></a>
   <a routerLink="/about"><Button class="AboutButton">About</Button></a>
   <a routerLink="/products"><Button class="ProductsButton">Products</Button></a>
-  <Button class="AdminButton">Login</Button>
+  <a routerLink="/login"><Button class="AdminButton">Login</Button></a>
 </span>
 </mat-toolbar>
