@@ -5,7 +5,7 @@
   <h1>The Company</h1>
     <p class="companyDescription">With a story that starts in 8000000 BC, we have spent millennias setting the example for gardening. Many flowers bloom, each wanting to grow the tallest, bloom the brightest. One by one, each one of them gets plucked, but not us. While all others return to the dirt, we remain in the garden. </p>
 </div> -->
-<div class="Card1Div">
+<!-- <div class="Card1Div">
 <mat-card class="card1">
   <mat-card-title class="cardTitle">The Company</mat-card-title>
   <img src ="../assets/aNiceGarden.jpg" class="gardenImage" mat-card-image>
@@ -36,16 +36,29 @@
 </div>
 
 <div class="CardDiv4">
-  <mat-card class="card4">
+    <mat-grid-tile class="card4">
       <mat-card-title class="cardTitle4">House Garden</mat-card-title>
-      <img mat-card-image src="../assets/houseGarden.jpg" />
-    </mat-card>
-  </div>
+      <img mat-card-image src="..//..//assets/houseGarden.jpg" />
+    </mat-grid-tile>
+  </div> -->
+
+  
+  <mat-grid-list cols="2" rowHeight='750px' [style.background]="'black'">
+      <mat-grid-tile class="CompanyImage"> <img src ="..//..//assets/aNiceGarden.jpg"></mat-grid-tile>
+      <mat-grid-tile class="CompanyText">With a story that starts in 8000000 BC, we have spent millennia setting the example for gardening. Many flowers bloom, each wanting to grow the tallest, bloom the brightest. One by one, each one of them gets plucked, but not us. While all others return to the dirt, we remain in the garden. </mat-grid-tile>
+      </mat-grid-list>
+
+      <mat-grid-list cols="2" rowHeight='750px' [style.background]="'green'">
+        <mat-grid-tile class="FountainText">Fountain Garden</mat-grid-tile>
+          <mat-grid-tile class="FountainImage"><img src ="..//..//assets/fountainGarden.jpg"> </mat-grid-tile>
+          </mat-grid-list>
+  <mat-grid-list cols="2" rowHeight='750px' [style.background]="'black'">
+    <mat-grid-tile class="GiraffeImage"><img src ="..//..//assets/giraffeGarden.jpg"> </mat-grid-tile>
+    <mat-grid-tile class="GiraffeText">Giraffe Garden</mat-grid-tile>
+  </mat-grid-list>
 
 
-  <mat-grid-list cols="4" [style.background]="'skyblue'">
-      <mat-grid-tile>Tile 1 </mat-grid-tile>
-      <mat-grid-tile>Tile 2 </mat-grid-tile>
-      <mat-grid-tile>Tile 3 </mat-grid-tile>
-      <mat-grid-tile>Tile 4 </mat-grid-tile>
+  <mat-grid-list cols="2" rowHeight='750px' [style.background]="'green'">
+    <mat-grid-tile class="HouseText">House Garden</mat-grid-tile>
+    <mat-grid-tile class="HouseImage"><img src ="..//..//assets/treeHouse.jpg"> </mat-grid-tile>
       </mat-grid-list>
