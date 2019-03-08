@@ -14,3 +14,44 @@
 
     font-size: 50px;
 }
+
+
+.CompanyImage {
+  height: 750px;
+  width: auto;
+}
+
+.CompanyText {
+    color: white;
+    font-size: 30px;
+}
+
+.FountainImage {
+    height: 750px;
+  width: auto;
+}
+
+.FountainText {
+    color: white;
+    font-size: 35px;
+}
+
+.GiraffeImage {
+    height: 750px;
+  width: auto;
+}
+
+.GiraffeText {
+    color: white;
+    font-size: 35px;
+}
+
+.HouseImage {
+    height: 750px;
+  width: auto;
+}
+
+.HouseText {
+    color: white;
+    font-size: 35px;
+}

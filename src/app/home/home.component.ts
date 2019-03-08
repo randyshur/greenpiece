@@ -5,6 +5,7 @@ export interface Tile {
   rows: number;
   text: string;
   border: string;
+  rowHeight: string;
 }
 
 @Component({
