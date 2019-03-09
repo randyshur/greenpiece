@@ -2,8 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Product } from './product.model';
 import { Observable, of } from 'rxjs';
+import { AuthenticationService } from './services/authentication.service';
 
-import { catchError, map, tap } from 'rxjs/operators';
+let token = localStorage.getItem('token');
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization':  token //works if i manually pass in a token
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -11,33 +18,18 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 export class ProductsServiceService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, 
+    private authservice:AuthenticationService
+    ) { }
 
   getProducts(){
     return this.http.get("https://efa-gardenapp-backend.herokuapp.com/api/product");
   }
 
-  // private handleError<T>(operation = 'operation', result?: T) {
-  //   return (error: any): Observable<T> => {
-  //     console.error(error);
-  //     this.log(`${operation} failed: ${error.message}`);
-  //     return of(result as T);
-  //   }
-  // }
 
-  // deleteProduct(product: Product | number): Observable<Product>{
-  //   // const id=products.id
-  //   const id = typeof product=== 'number' ? product : product.id;
-  //   const url=`https://efa-gardenapp-backend.herokuapp.com/api/product/${id}`
+deleteProduct(id){
+  return this.http.delete(`https://efa-gardenapp-backend.herokuapp.com/api/product/${id}`, httpOptions)
+}
 
-  //   return this.http.delete<Product>(url, httpOptions).pipe(
-  //     tap(_ => this.log('you deleted a product ^_^')),
-  //     catchError(this.handleError<Product>(this.deleteProduct))
-  //   )
-  // }
-
-  deleteProduct(product: Product){
-return this.http.delete(`https://efa-gardenapp-backend.herokuapp.com/api/product/${product.id}`)
-  }
 
 }
