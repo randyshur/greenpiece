@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsServiceService } from '../products-service.service';
+import {AuthenticationService} from '../services/authentication.service';
+// import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-products',
@@ -10,7 +12,7 @@ export class ProductsComponent implements OnInit {
 
   products=<any>[];
 
-  constructor(private productsservice: ProductsServiceService){ }
+  constructor(private productsservice: ProductsServiceService, private authservice: AuthenticationService){ }
 
 
   ngOnInit() {
@@ -19,6 +21,13 @@ export class ProductsComponent implements OnInit {
       this.products = data;
     console.log(this.products)
     })
+  }
+
+  deleteProduct(product){
+    console.log(product)
+    // this.authservice.getToken()
+
+this.productsservice.deleteProduct(product).subscribe(data => console.log('product deleted'))
   }
 
 }
