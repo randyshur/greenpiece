@@ -1,15 +1,16 @@
-
-
 <mat-toolbar color="warn">
   <span class="NavbarFont">Green Piece</span>
 
   <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space">{{currentUser.token.substring(1,5)}}</span>
+  <span class="example-fill-remaining-space"></span>
 
  <span>
   <a routerLink="/home"><Button class="HomeButton">Home</Button></a>
   <a routerLink="/about"><Button class="AboutButton">About</Button></a>
   <a routerLink="/products"><Button class="ProductsButton">Products</Button></a>
-  <a routerLink="/login"><Button class="AdminButton">Login</Button></a>
+  <a *ngIf="currentUser == null" routerLink="/login"><Button class="AdminButton">Login</Button></a>
+  <a *ngIf="currentUser" (click)="logout()"><Button class="AdminButton">Logout</Button></a>
+
+
 </span>
 </mat-toolbar>
